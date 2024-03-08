@@ -1,12 +1,17 @@
 // This is the code that is bundled for the client-side:
 
 "use client";
+import { useState } from "react";
 import Randomizer from "../Randomizer";
 import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Intro = () => {
+  const router = useRouter();
+  const [name, setName] = useState("Hieu, Do Minh");
+
   return (
     <div className="section flex flex-col items-center text-center">
       <motion.div
@@ -55,11 +60,13 @@ const Intro = () => {
           type: "spring",
           stiffness: 150,
         }}
+        onMouseEnter={()=> setName("Đỗ Minh Hiếu")}
+        onMouseLeave={()=> setName("Hieu, Do Minh")}
       >
-        Hieu, Do Minh
+        {name}
       </motion.h1>
       <motion.p
-        className="text-base sm:text-lg lg:text-2xl leading-loose mb-8 top-8 opacity-0 relative"
+        className="text-base sm:text-lg lg:text-xl leading-loose mb-8 top-8 opacity-0 relative"
         animate={{ top: 0, opacity: 1 }}
         transition={{
           duration: 0.3,
@@ -68,12 +75,12 @@ const Intro = () => {
           stiffness: 150,
         }}
       >
-        Hi, I&apos;m a Front-end Developer, Music Producer and <Randomizer />.
-        <br/>
-        <br/>
+        Hi, I&apos;m a Front-end Web Developer, Music Producer and <Randomizer />.
+        <br />
+        <br />
         Welcome to my portfolio ! 👋
-        <br/>
-        <br/>
+        <br />
+        <br />
         Click to find more information about me in...
       </motion.p>
       <motion.div
@@ -89,8 +96,18 @@ const Intro = () => {
         }}
         viewport={{ once: true }}
       >
-        <button className="flex-1 w-full md:w-auto button buttonLg buttonPrimary">🖥️ IT Business</button>
-        <button className="flex-1 w-full md:w-auto button buttonLg buttonPrimary">🎹 Music Business</button>
+        <button
+          onClick={() => router.push("/it")}
+          className="flex-1 w-full md:w-auto button buttonLg buttonPrimary"
+        >
+          🖥️ IT Business
+        </button>
+        <button
+          onClick={() => router.push("/music")}
+          className="flex-1 w-full md:w-auto button buttonLg buttonPrimary"
+        >
+          🎹 Music Business
+        </button>
       </motion.div>
       {/* <Link href="/about">
         <motion.span

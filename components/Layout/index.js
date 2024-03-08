@@ -12,7 +12,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageName }) => {
   const themeColors = [
     "#FF8A00",
     "#00d1b2",
@@ -57,9 +57,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <title>hews Portfolio</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
+        <title>hews Portfolio {pageName ? `| ${pageName}` : ""}</title>
         <meta name="title" content="hews Portfolio" />
         <meta
           name="description"

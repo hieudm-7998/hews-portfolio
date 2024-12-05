@@ -45,6 +45,30 @@ function Music() {
             preload="none"
           ></iframe>
         </div>
+        <div className="py-8">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/CHtdoJxysbA?si=bmBinPlyLJbr-orz"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            preload="none"
+          ></iframe>
+        </div>
+        <div className="py-8">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/o7FQqPRoSMc?si=VkaXH8DzDoV6nsgU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            preload="none"
+          ></iframe>
+        </div>
         <Divider />
         <h2 className="spatial text-2xl text-center">
           And I also make instrumental/type beat...
@@ -110,7 +134,7 @@ function Music() {
           ></iframe>
         </div>
       </div>
-      <Divider/>
+      <Divider />
     </Layout>
   );
 }

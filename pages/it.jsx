@@ -12,18 +12,24 @@ function About() {
     <Layout pageName="IT">
       <div className="section">
         <div className="flex">
-          <button className="navigate-btn transition-all" onClick={() => router.push("/")}>« Back to homepage</button>
+          <button
+            className="navigate-btn transition-all"
+            onClick={() => router.push("/")}
+          >
+            « Back to homepage
+          </button>
           {/* <button className="navigate-btn transition-all" onClick={() => router.push("/")}>My profile »</button> */}
         </div>
 
         <p className="my-10">
-          I've been working as Front-end Developer with 4 years of experience in
-          designing and implementing user-friendly, responsive and visually
-          appealing web applications. Proficient in ReactJS, VueJS and various
-          UI libraries. Committed to crafting seamless user experiences through
-          responsive and visually appealing interfaces. Passionate about
-          creating dynamic and interactive web applications that marry design
-          with functionality.
+          I've been working as Front-end Developer with over 5 years of
+          experience delivering high-quality web applications for diverse
+          industries, including CMS, E-commerce, Blockchain. Proficient in
+          modern web development technologies with a strong focus on building
+          scalable, user-centric solutions. Adept at collaborating with
+          crossfunctional teams to develop robust platforms, optimize user
+          experiences, and implement innovative features, driving impactful
+          digital transformation for global clients.
         </p>
         <Divider />
       </div>
